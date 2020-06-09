@@ -1,8 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "base64.h"
-#include "base64.cpp"
+#include "base64/base64.h"
+#include "base64/base64.cpp"
 
 int main()
 {
