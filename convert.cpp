@@ -124,7 +124,8 @@ int main(int argc, char *argv[])
         image_file.close();
     }
     else {
-        std::cout << "ERROR: File not found";
+        std::cout << "ERROR: File not found" << std::endl;
+        exit(-1);
     }
 
     struct jpeg_data image_data{};
