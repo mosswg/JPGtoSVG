@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include "base64/base64.h"
+#include <base64.h>
 
 struct jpeg_data {
 int bits_per_channel;
