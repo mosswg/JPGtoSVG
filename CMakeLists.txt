@@ -13,8 +13,7 @@ if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
     if(GIT_SUBMODULE)
         message(STATUS "Getting submodules")
         execute_process(COMMAND ${GIT_EXECUTABLE} submodule update
-                WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-                RESULT_VARIABLE GIT_SUBMOD_RESULT)
+                RESULT_VARIABLE GIT_SUBMOD_RESULT OUTPUT_QUIET)
         if (NOT GIT_SUBMOD_RESULT EQUAL "0")
             message(FATAL_ERROR "git submodule update failed with ${GIT_SUBMOD_RESULT}")
         endif()
@@ -23,7 +22,7 @@ endif()
 
 # Check if submodules exists
 if(NOT EXISTS "${PROJECT_SOURCE_DIR}/base64")
-    message(FATAL_ERROR "Required submodule cpp-base64 was not found")
+    message(FATAL_ERROR "Required submodule base64 was not found")
 endif()
 
 include_directories(base64)
