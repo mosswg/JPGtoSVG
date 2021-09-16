@@ -12,6 +12,8 @@ if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
     option(GIT_SUBMODULE "Check submodules during build" ON)
     if(GIT_SUBMODULE)
         message(STATUS "Getting submodules")
+        execute_process(COMMAND ${GIT_EXECUTABLE} submodule init
+                RESULT_VARIABLE GIT_SUBMOD_RESULT OUTPUT_QUIET)
         execute_process(COMMAND ${GIT_EXECUTABLE} submodule update
                 RESULT_VARIABLE GIT_SUBMOD_RESULT OUTPUT_QUIET)
         if (NOT GIT_SUBMOD_RESULT EQUAL "0")
