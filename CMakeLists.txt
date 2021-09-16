@@ -29,6 +29,6 @@ endif()
 include_directories(base64)
 
 add_executable(JPGtoSVG
-        cpp-base64/base64.cpp
-        cpp-base64/base64.h
+        base64/base64.cpp
+        base64/base64.h
         convert.cpp)
