@@ -1,5 +1,5 @@
 # JPGtoSVG
-Change JPG image to SVG
+Converts JPG/JPEG images to SVG format
 
 
 # How to use
@@ -17,4 +17,4 @@ Option must be prefix with a '-'. <br>
 
 <br> <br>
 # Dependencies
-I'm using a base64 library made by René Nyffenegger found here: https://github.com/ReneNyffenegger/cpp-base64/blob/master/base64.cpp
+This Project Uses a Base64 Library [Made by René Nyffenegger](https://github.com/ReneNyffenegger/cpp-base64/)
